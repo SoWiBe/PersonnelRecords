@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:PersonnelRecords"
         mc:Ignorable="d"
         Title="MainWindow" 
+        
         Height="650" 
         Width="1200"  
         WindowStyle="None"
