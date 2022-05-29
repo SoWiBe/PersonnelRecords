@@ -29,5 +29,6 @@ namespace PersonnelRecords
         public virtual DbSet<Positions> Positions { get; set; }
         public virtual DbSet<Subdivisions> Subdivisions { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<TypesOfSubdivisions> TypesOfSubdivisions { get; set; }
     }
 }

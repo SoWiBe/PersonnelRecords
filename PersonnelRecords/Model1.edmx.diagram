@@ -5,12 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="bb13ef5319ba470cae922125ddae396a" Name="Diagram1">
-        <EntityTypeShape EntityType="StaffBaseModel.Employees" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="StaffBaseModel.Positions" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="StaffBaseModel.Subdivisions" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="StaffBaseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="StaffBaseModel.FK_Employees_Positions" ManuallyRouted="false" />
-        <AssociationConnector Association="StaffBaseModel.FK_Positions_Subdivisions" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="StaffBaseModel.Employees" Width="1.5" PointX="7.5" PointY="0.875" />
+        <EntityTypeShape EntityType="StaffBaseModel.Positions" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="StaffBaseModel.Subdivisions" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="StaffBaseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="StaffBaseModel.TypesOfSubdivisions" Width="1.5" PointX="0.75" PointY="1.25" />
+        <AssociationConnector Association="StaffBaseModel.FK_Employees_Positions" />
+        <AssociationConnector Association="StaffBaseModel.FK_Positions_Subdivisions" />
+        <AssociationConnector Association="StaffBaseModel.FK_Subdivisions_TypesOfSubdivisions" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,20 +12,18 @@ namespace PersonnelRecords
     using System;
     using System.Collections.Generic;
     
-    public partial class Subdivisions
+    public partial class TypesOfSubdivisions
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Subdivisions()
+        public TypesOfSubdivisions()
         {
-            this.Positions = new HashSet<Positions>();
+            this.Subdivisions = new HashSet<Subdivisions>();
         }
     
         public int Id { get; set; }
-        public string Info { get; set; }
-        public Nullable<int> IdType { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Positions> Positions { get; set; }
-        public virtual TypesOfSubdivisions TypesOfSubdivisions { get; set; }
+        public virtual ICollection<Subdivisions> Subdivisions { get; set; }
     }
 }

@@ -64,7 +64,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddAndChangeEmployeePage.xaml.cs">
+      <DependentUpon>AddAndChangeEmployeePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Employees.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -76,6 +80,7 @@
     </Compile>
     <Compile Include="MVVM\Model\PersonalModel.cs" />
     <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="MVVM\ViewModel\AddAndChangeEmployeeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\PersonalViewModel.cs" />
     <Compile Include="PersonalPage.xaml.cs">
       <DependentUpon>PersonalPage.xaml</DependentUpon>
@@ -89,6 +94,13 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="TypesOfSubdivisions.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Page Include="AddAndChangeEmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
