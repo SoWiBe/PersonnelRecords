@@ -13,6 +13,7 @@ namespace PersonnelRecords.MVVM.ViewModel
     class AddAndChangeEmployeeViewModel : ObservableObject
     {
         public string NamePage { get; set; }
+        public string SelectedDate { get; set; }
 
         private Employees employee;
         public Employees Employee { get; set; }
@@ -69,7 +70,6 @@ namespace PersonnelRecords.MVVM.ViewModel
         public ICommand SaveCommand { get; set; }
         public ICommand BackCommand { get; set; }
 
-
         public AddAndChangeEmployeeViewModel(string namePage, Employees employee)
         {
             this.NamePage = namePage;
@@ -79,7 +79,6 @@ namespace PersonnelRecords.MVVM.ViewModel
                 this.employee = employee;
             }
             
-
             Genders = new ObservableCollection<string>();
             Genders.Add("Мужской");
             Genders.Add("Женский");
@@ -98,6 +97,7 @@ namespace PersonnelRecords.MVVM.ViewModel
                 if (Employee.Gender.Equals("Мужской")) SelectedGender = Genders[0];
                 else SelectedGender = Genders[1];
                 SelectedPosition = StaffBaseEntities.GetContext().Positions.Where(x => x.Name == Employee.Positions.Name).First();
+                SelectedDate = Employee.DateOfBirth;
             }
 
             SaveCommand = new RelayCommand(o => SaveInformation());
@@ -122,6 +122,7 @@ namespace PersonnelRecords.MVVM.ViewModel
             employee.FIO = FIO;
             employee.Gender = SelectedGender;
             employee.Positions = SelectedPosition;
+            employee.DateOfBirth = SelectedDate;
 
             if (employee.Id == 0)
             {
